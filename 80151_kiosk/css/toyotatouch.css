@@ -1,0 +1,273 @@
+body {
+	color: white;
+	font: 12px "Toyota Display", Arial, Helvetica, "Helvetica Neue", Geneva, sans-serif;
+	background: #000000 url('../img/background_v3.png') no-repeat;
+	margin: 0;
+	padding: 0;
+	width: 1280px;
+	-webkit-user-select: none;
+}
+
+#main {
+	width: 972px;
+	padding-left: 75px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.pageTitle {
+	color: #ca162e;
+	text-align: left;
+	font-weight: bold;
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+
+.small {
+	font-size: 18px;
+}
+
+.stepInfo {
+	font-size: 40px;
+	font-weight: bold;
+	margin-bottom: 30px;
+	clear: both;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.row {
+	clear: both;
+}
+
+.caption {
+	font-size: 26px;
+	float: left;
+	width: 150px;
+	margin-top: 4px;
+}
+
+#boxCaption {
+	text-align: right;
+	padding-right: 30px;
+}
+
+.data {
+	font-size: 24px;
+	border: 1px solid gray;
+	background-color: #e5e5e5;
+	padding: 3px;
+	height: 28px;
+	width: 700px;
+	float: left;
+	color: black;
+	overflow: hidden;
+}
+
+#box, #number, #zip, #confirm_box, #confirm_number, #confirm_zip {
+	width: 100px;
+	float: left;
+}
+
+#country {
+	width: 300px;
+	float: left;
+}
+.currentData {
+	font-size: 24px;
+	border: 1px solid blue;
+	background-color: #a8c5da;
+	padding: 3px;
+	height: 28px;
+	width: 700px;
+	float: left;
+	color: black;
+	overflow: hidden;
+}
+
+/* @group KEYBOARD */
+
+#keyboard {
+	position: absolute;
+	top: 550px;
+	width: 928px;
+}
+
+#navigation {
+	margin-bottom: 100px;
+}
+
+#alpha {
+	float: left;
+}
+
+#numeric {
+	margin-left: 50px;
+	float: left;
+}
+
+.row {
+	margin-bottom: 20px;
+	float: left;
+}
+
+#alphaRow1 {
+	
+}
+
+#alphaRow2 {
+	
+}
+
+#alphaRow3 {
+	
+}
+
+#numericRow1 {
+	
+}
+
+#numericRow2 {
+	
+}
+
+#numericRow3 {
+	
+}
+
+
+
+/* @end */
+
+#window {
+	width: 972px;
+	overflow: hidden;
+}
+
+#view {
+	width: 5085px;
+}
+
+.scene {
+	float: left;
+	width: 917px;
+	margin-right: 100px;
+	margin-top: 50px;
+}
+
+.scene_splash {
+	float: left;
+	width: 940px;
+	margin-top: 50px;
+}
+
+#scene0 {
+	font-size: 64px;
+	font-weight: bold;
+}
+
+.redText {
+	color: white;
+	text-align: left;
+}
+
+#start_container {
+	position: absolute;
+	top: 450px;
+	width: 1100px;
+}
+
+#start {
+	margin-left: 350px;
+	margin-top: 25px;
+	margin-bottom: 70px;
+}
+
+.clear {
+	clear: both;
+}
+
+#confirm {
+	float: left;
+	margin-bottom: px;
+}
+
+#disclaimer {
+	text-align: center;
+	float: left;
+}
+
+#confirmButton {
+	float: left;
+	padding-left: 150px;
+	margin-bottom: 20px;
+}
+
+#confirmButton img {
+	float: left;
+}
+
+.correct {
+	font-size: 24px;
+	margin-left: 20px;
+	float: left;
+	margin-top: 25px;
+}
+
+#genderButtons {
+	float: left;
+}
+
+#countries {
+	z-index: 1;
+	position: absolute;
+	top: 430px;
+	left: 225px;
+	background-color: #d8d8d8;
+	width: 320px;
+	height: 500px;
+	overflow: auto;
+	color: black;
+}
+
+#countries ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	list-style-image: none;
+}
+
+#countries a {
+	display: block;
+	text-decoration: none;
+	color: black;
+	border-bottom: 1px solid black;
+	font-size: 26px;
+	line-height: 2.5;
+	padding-left: 15px;
+}
+
+#thanks {
+	text-align: center;
+}
+
+#car_info {
+	font-size: 28px;
+}
+
+p {
+	-webkit-margin-before: 0.5em;
+	-webkit-margin-after: 0.5em;
+}
+
+.smallText {
+	font-size: 80%;
+}

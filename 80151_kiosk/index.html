@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Toyota Kiosk</title>
+	<link rel="stylesheet" href="css/toyotatouch.css" type="text/css" />
+	<script src="js/prototype.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/effects.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/toyotatouch.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body onLoad="preloader()">
+	<div id="main">
+		<div id="window">
+			<div id="view">
+				<div id="scene0" class="scene_splash">
+					<div class="redText"><p>The new<br>Auris Hybrid Touring Sports</p><p>Please leave your contact details for further information</p></div>
+				</div>
+			</div><!--#view-->
+		</div><!--#window-->
+		<div id="start_container">
+		
+			<div id="start">
+				<img src="img/start_enter.png" width="206" height="65" alt="start_enter" border="0" onmousedown="buttonDown(this,'start_enter');" onmouseup="buttonUp(this,'start_enter');">
+			</div>
+			
+			<div id="car_info">
+                <p>Main technical features of the exhibited model :</p>
+                <ul>
+                    <li>1.8 VVT-i Hybrid</li>
+                    <li>60 KW electric motor</li>
+                    <li>Max power : 136 Din hp</li>
+                    <li>Fuel consumption combined : 3.7l/100km</li>
+                    <li>CO2 emissions (g/km) :  85g</li>
+                </ul>
+                <p>Price for 1.8 HSD Comfort as from 25.820 € incl. VAT *</p>
+                <p><span class="smallText">* price only valid for Belgium, for other countries, please contact your local dealer</span></p>
+			</div>
+			
+		</div><!--#keyboard-->
+	</div><!--#main-->
+</body>
+</html>

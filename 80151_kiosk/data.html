@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>untitled</title>
+	<link rel="stylesheet" href="css/toyotatouch.css" type="text/css" />
+	<script src="js/prototype.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/effects.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/toyotatouch.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		::-webkit-scrollbar {
+		    width: 42px;
+		    height: 13px;
+		}
+		/* Vertical Scrollbar Styles */
+
+		::-webkit-scrollbar:vertical {
+		    -webkit-border-image: url(resources/vertical-button.png) 2 0 2 0;
+		    border-color: transparent;
+		    border-width: 2px 0;
+		    background-image: url(resources/vertical-button-background.png);
+		    background-repeat: repeat-y;
+		}
+
+		::-webkit-scrollbar:vertical:corner-present {
+		    border-bottom-width: 0;
+		}
+
+		::-webkit-scrollbar-track:vertical:disabled:corner-present {
+		    margin-bottom: 5px;
+		}
+
+		::-webkit-scrollbar:vertical:window-inactive {
+		    -webkit-border-image: url(resources/vertical-button-inactive.png) 2 0 2 0;
+		    background-image: url(resources/vertical-button-background-inactive.png);
+		}
+
+		::-webkit-scrollbar-thumb:vertical {
+		    -webkit-border-image: url(resources/vertical-thumb.png) 13 0 13 0;
+		    border-color: transparent;
+		    border-width: 13px 0;
+		    min-height: 20px;
+		}
+
+		::-webkit-scrollbar-thumb:vertical:hover {
+		    -webkit-border-image: url(resources/vertical-thumb-hover.png) 13 0 13 0;
+		}
+
+		::-webkit-scrollbar-thumb:vertical:active {
+		    -webkit-border-image: url(resources/vertical-thumb-active.png) 13 0 13 0;
+		}
+
+		::-webkit-scrollbar-thumb:vertical:window-inactive {
+		    -webkit-border-image: url(resources/vertical-thumb-inactive.png) 13 0 13 0;
+		}
+
+		::-webkit-scrollbar-track-piece:vertical:start:no-button,
+		.double-end::-webkit-scrollbar-track-piece:vertical:start,
+		.none::-webkit-scrollbar-track-piece:vertical:start {
+		    margin-top: 6px;
+		}
+
+		::-webkit-scrollbar-track-piece:vertical:end:no-button,
+		.double-start::-webkit-scrollbar-track-piece:vertical:end,
+		.none::-webkit-scrollbar-track-piece:vertical:end {
+		    margin-bottom: 6px;
+		}
+
+		::-webkit-scrollbar-track-piece:vertical:end:no-button:corner-present,
+		.double-start::-webkit-scrollbar-track-piece:vertical:end:corner-present,
+		.none::-webkit-scrollbar-track-piece:vertical:end:corner-present {
+		    margin-bottom: 5px;
+		}
+
+		:not(.none):not(.double-end)::-webkit-scrollbar-track-piece:vertical:start:single-button,
+		:not(.none):not(.double-end)::-webkit-scrollbar-track-piece:vertical:start:double-button,
+		.single::-webkit-scrollbar-track-piece:vertical:start,
+		.double-start::-webkit-scrollbar-track-piece:vertical:start,
+		.double-both::-webkit-scrollbar-track-piece:vertical:start {
+		    margin-top: -6px;
+		}
+
+		:not(.none):not(.double-start)::-webkit-scrollbar-track-piece:vertical:end:single-button,
+		:not(.none):not(.double-start)::-webkit-scrollbar-track-piece:vertical:end:double-button,
+		.single::-webkit-scrollbar-track-piece:vertical:end,
+		.double-end::-webkit-scrollbar-track-piece:vertical:end,
+		.double-both::-webkit-scrollbar-track-piece:vertical:end {
+		    margin-bottom: -6px;
+		}
+
+		::-webkit-scrollbar-track:vertical:disabled {
+		    -webkit-border-image: url(resources/vertical-track-disabled.png) 13 0 13 0;
+		    border-color: transparent;
+		    border-width: 13px 0;
+		}
+
+		::-webkit-scrollbar-track-piece:vertical:decrement {
+		    -webkit-border-image: url(resources/vertical-track.png) 13 0 13 0;
+		    border-color: transparent;
+		    border-width: 13px 0 0 0;
+		}
+
+		::-webkit-scrollbar-track-piece:vertical:decrement:hover {
+		    -webkit-border-image: url(resources/vertical-track-hover.png) 13 0 13 0;
+		}
+
+		::-webkit-scrollbar-track-piece:vertical:decrement:active {
+		    -webkit-border-image: url(resources/vertical-track-active.png) 13 0 13 0;
+		}
+
+		::-webkit-scrollbar-track-piece:vertical:increment {
+		    -webkit-border-image: url(resources/vertical-track.png) 13 0 13 0;
+		    border-color: transparent;
+		    border-width: 0 0 13px 0;
+		}
+
+		::-webkit-scrollbar-track-piece:vertical:increment:hover {
+		    -webkit-border-image: url(resources/vertical-track-hover.png) 13 0 13 0;
+		}
+
+		::-webkit-scrollbar-track-piece:vertical:increment:active {
+		    -webkit-border-image: url(resources/vertical-track-active.png) 13 0 13 0;
+		}
+
+		::-webkit-scrollbar-button:vertical {
+		    height: 20px;
+		    -webkit-border-image: url(resources/vertical-button.png) 2 0 2 0;
+		    border-color: transparent;
+		    border-width: 2px 0;
+		}
+
+		::-webkit-scrollbar-button:vertical:decrement {
+		    background-image: url(resources/vertical-decrement-arrow.png), url(resources/vertical-button-background.png);
+		    background-repeat: no-repeat, repeat-y;
+		    background-position: 3px 3px, 0 0;
+		}
+
+		::-webkit-scrollbar-button:vertical:decrement:hover {
+		    -webkit-border-image: url(resources/vertical-button-hover.png) 2 0 2 0;
+		    background-image: url(resources/vertical-decrement-arrow.png), url(resources/vertical-button-background-hover.png);
+		}
+
+		::-webkit-scrollbar-button:vertical:decrement:active {
+		    -webkit-border-image: url(resources/vertical-button-active.png) 2 0 2 0;
+		    background-image: url(resources/vertical-decrement-arrow.png), url(resources/vertical-button-background-active.png);
+		}
+
+		::-webkit-scrollbar-button:vertical:decrement:window-inactive {
+		    -webkit-border-image: url(resources/vertical-button-inactive.png) 2 0 2 0;
+		    background-image: url(resources/vertical-decrement-arrow.png), url(resources/vertical-button-background-inactive.png);
+		}
+
+		::-webkit-scrollbar-button:vertical:increment {
+		    background-image: url(resources/vertical-increment-arrow.png), url(resources/vertical-button-background.png);
+		    background-repeat: no-repeat, repeat-y;
+		    background-position: 3px 8px, 0 0;
+		}
+
+		::-webkit-scrollbar-button:vertical:increment:hover {
+		    -webkit-border-image: url(resources/vertical-button-hover.png) 2 0 2 0;
+		    background-image: url(resources/vertical-increment-arrow.png), url(resources/vertical-button-background-hover.png);
+		}
+
+		::-webkit-scrollbar-button:vertical:increment:active {
+		    -webkit-border-image: url(resources/vertical-button-active.png) 2 0 2 0;
+		    background-image: url(resources/vertical-increment-arrow.png), url(resources/vertical-button-background-active.png);
+		}
+
+		::-webkit-scrollbar-button:vertical:increment:window-inactive {
+		    -webkit-border-image: url(resources/vertical-button-inactive.png) 2 0 2 0;
+		    background-image: url(resources/vertical-increment-arrow.png), url(resources/vertical-button-background-inactive.png);
+		}
+
+		:not(.single)::-webkit-scrollbar-button:double-button:vertical:start:decrement,
+		.double-start::-webkit-scrollbar-button:vertical:start:decrement,
+		.double-both::-webkit-scrollbar-button:vertical:start:decrement {
+		    height: 14px;
+		    border-bottom-width: 0;
+		    background-position: 3px 3px, 0 0;
+		}
+
+		:not(.single)::-webkit-scrollbar-button:double-button:vertical:start:increment,
+		.double-start::-webkit-scrollbar-button:vertical:start:increment,
+		.double-both::-webkit-scrollbar-button:vertical:start:increment {
+		    background-position: 3px 4px, 0 0;
+		}
+
+		:not(.single)::-webkit-scrollbar-button:double-button:vertical:end:decrement,
+		.double-end::-webkit-scrollbar-button:vertical:end:decrement,
+		.double-both::-webkit-scrollbar-button:vertical:end:decrement {
+		    background-position: 3px 8px, 0 0;
+		}
+
+		:not(.single)::-webkit-scrollbar-button:double-button:vertical:end:increment,
+		.double-end::-webkit-scrollbar-button:vertical:end:increment,
+		.double-both::-webkit-scrollbar-button:vertical:end:increment {
+		    height: 14px;
+		    border-top-width: 0;
+		    background-position: 3px 4px, 0 0;
+		}
+
+		::-webkit-scrollbar-button:vertical:end:increment:corner-present {
+		    border-bottom-width: 0;
+		    height: 19px;
+		}
+
+		:not(.single)::-webkit-scrollbar-button:double-button:vertical:end:increment:corner-present,
+		.double-end::-webkit-scrollbar-button:vertical:end:increment:corner-present,
+		.double-both::-webkit-scrollbar-button:vertical:end:increment:corner-present {
+		    height: 13px;
+		}
+
+		/* Forced Scrollbar Mode Styles */
+
+		.single::-webkit-scrollbar-button:start:decrement,
+		.single::-webkit-scrollbar-button:end:increment {
+		    display: block;
+		}
+
+		.single::-webkit-scrollbar-button:start:increment,
+		.single::-webkit-scrollbar-button:end:decrement {
+		    display: none;
+		}
+
+		.double-end::-webkit-scrollbar-button:start {
+		    display: none;
+		}
+
+		.double-end::-webkit-scrollbar-button:end {
+		    display: block;
+		}
+
+		.double-start::-webkit-scrollbar-button:start {
+		    display: block;
+		}
+
+		.double-start::-webkit-scrollbar-button:end {
+		    display: none;
+		}
+
+		.double-both::-webkit-scrollbar-button {
+		    display: block;
+		}
+
+		.none::-webkit-scrollbar-button {
+		    display: none;
+		}
+	</style>
+</head>
+
+<body onload="preloader();giveFieldFocus($('lastname'),false);resetTimer();">
+	<div id="countries">
+		<ul>
+			<li><a href="#" onclick="setCountry(this.id);" id="Austria">Austria</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Belgium">Belgium</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Bosnia-Herzegovina">Bosnia-Herzegovina</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Bulgaria">Bulgaria</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Canaries">Canaries</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Croatia">Croatia</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Cyprus">Cyprus</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Czech Republic">Czech Republic</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Denmark">Denmark</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Estonia">Estonia</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Finland">Finland</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="France">France</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Germany">Germany</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Greece">Greece</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Hungary">Hungary</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Iceland">Iceland</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Ireland">Ireland</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Israel">Israel</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Italy">Italy</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Kazakhstan">Kazakhstan</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Kosovo">Kosovo</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Kyrgyzstan">Kyrgyzstan</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Latvia">Latvia</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Lithuania">Lithuania</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Luxembourg">Luxembourg</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Moldova">Moldova</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Montenegro">Montenegro</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Netherlands">Netherlands</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Norway">Norway</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Poland">Poland</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Portugal">Portugal</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Romania">Romania</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Russia">Russia</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Serbia">Serbia</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Slovakia">Slovakia</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Slovenia">Slovenia</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Spain">Spain</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Sweden">Sweden</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Switzerland">Switzerland</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Turkey">Turkey</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="Ukraine">Ukraine</a></li>
+			<li><a href="#" onclick="setCountry(this.id);" id="United Kingdom">United Kingdom</a></li>
+		</ul>
+	</div>
+	<div id="main">
+		<div id="window">
+			<div id="view">
+				<div id="scene1" class="scene">
+					<div class="pageTitle">
+						Please fill in this form <span class="small">(4 steps)</span>
+					</div><!--#pageTitle-->
+					<div class="stepInfo">
+						<div class="left">Step 1 of 4</div><div class="right"><span class="small">(*)Mandatory</span></div><div class="clear"></div>
+					</div><!--#stepInfo-->
+					<div class="row"><div class="caption">Gender*</div><div id="genderButtons"><img src="img/female.png" width="140" height="34" alt="female" onClick="setGender(this);"><img src="img/male.png" width="140" height="34" alt="male" onClick="setGender(this);"></div></div>
+					<div class="row"><div class="caption">Name*</div><div id="lastname" class="data" onclick="giveFieldFocus(this,true);"></div></div>
+					<div class="row"><div class="caption">First Name*</div><div id="firstname" class="data" onclick="giveFieldFocus(this,true);"></div></div>
+				</div>
+				<div id="scene2" class="scene">
+					<div class="pageTitle">
+						&nbsp;
+					</div><!--#pageTitle-->
+					<div class="stepInfo">
+						<div class="left">Step 2 of 4</div><div class="right"><span class="small">(*)Mandatory</span></div><div class="clear"></div>
+					</div><!--#stepInfo-->
+					<div class="row"><div class="caption">Street*</div><div id="street" class="data" onclick="giveFieldFocus(this,true);"></div></div>
+					<div class="row"><div class="caption">Number*</div><div id="number" class="data" onclick="giveFieldFocus(this,true);"></div><div class="caption" id="boxCaption">Box</div><div id="box" class="data" onclick="giveFieldFocus(this,true);"></div></div>
+					<div class="row"><div class="caption">Zip code*</div><div id="zip" class="data" onclick="giveFieldFocus(this,true);"></div></div>
+					<div class="row"><div class="caption">City*</div><div id="city" class="data" onclick="giveFieldFocus(this,true);"></div></div>
+					<div class="row"><div class="caption">Country*</div><div id="country" class="data" onclick="giveFieldFocus(this,true);hideKeyboard();"></div></div>
+				</div>
+				<div id="scene3" class="scene">
+					<div class="pageTitle">
+						&nbsp;
+					</div><!--#pageTitle-->
+					<div class="stepInfo">
+						<div class="left">Step 3 of 4</div><div class="right"><span class="small">(*)Mandatory</span></div><div class="clear"></div>
+					</div><!--#stepInfo-->
+					<div class="row"><div class="caption">Telephone*</div><div id="telephone" class="data" onclick="giveFieldFocus(this,true);">+</div></div>
+					<div class="row"><div class="caption">Email</div><div id="email" class="data" onclick="giveFieldFocus(this,true);"></div></div>
+				</div>
+				<div id="scene4" class="scene">
+					<div class="pageTitle">
+						Please confirm your data
+					</div><!--#pageTitle-->
+					<div class="stepInfo">
+						<div class="left">Step 4 of 4</div>
+					</div><!--#stepInfo-->
+					<div id="confirm">
+						<div class="row"><div class="caption">Gender</div><div id="confirm_gender" alt="gender" class="data" onmouseup="gotoSceneWithFocusOn(0,this);"></div></div>
+						<div class="row"><div class="caption">First Name</div><div id="confirm_firstname" alt="firstname" class="data" onmouseup="gotoSceneWithFocusOn(0,this);"></div></div>
+						<div class="row"><div class="caption">Name</div><div id="confirm_lastname" alt="lastname" class="data" onmouseup="gotoSceneWithFocusOn(0,this);"></div></div>
+						<div class="row"><div class="caption">Street</div><div id="confirm_street" alt="street" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
+						<div class="row"><div class="caption">Number</div><div id="confirm_number" alt="number" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div><div class="caption" id="boxCaption">Box</div><div id="confirm_box" alt="box" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
+						<div class="row"><div class="caption">Zip Code</div><div id="confirm_zip" alt="zip" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
+						<div class="row"><div class="caption">City</div><div id="confirm_city" alt="city" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
+						<div class="row"><div class="caption">Country</div><div id="confirm_country" alt="country" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
+						<div class="row"><div class="caption">Telephone</div><div id="confirm_telephone" alt="telephone" class="data" onmouseup="gotoSceneWithFocusOn(2,this);"></div></div>
+						<div class="row"><div class="caption">Email</div><div id="confirm_email" alt="email" class="data" onmouseup="gotoSceneWithFocusOn(2,this);"></div></div>
+					</div>
+					<div id="confirmButton">
+						<img src="img/confirm.png" width="206" height="65" alt="confirm" border="0" onmousedown="buttonDown(this,'confirm');" onmouseup="buttonUp(this,'confirm');"><div class="correct">or tap a field to correct</div>
+					</div>
+					<div id="disclaimer">
+						Your contact information is stored in the database of the Toyota-organisation of your country in order to inform you in the future of our activities. You can consult, correct and delete your information. Your contact information may be forwarded to our partners, among which are recognised Toyota Distributors and Repairers.<br />For more information, you can contact your local importer or visit www.toyota-europe.com
+					</div><!--#disclaimer-->
+				</div>
+			</div><!--#view-->
+		</div><!--#window-->
+		<div id="keyboard">
+			<div id="navigation">
+				<div class="left">
+					<img id="back" src="img/back.png" width="206" height="65" alt="back" border="0" onmousedown="buttonDown(this);" onmouseup="buttonUp(this);">
+				</div>
+				<div class="right">
+					<img id="next" src="img/next.png" width="206" height="65" alt="next" border="0" onmousedown="buttonDown(this);" onmouseup="buttonUp(this);">
+				</div>
+			</div><!--#navigation-->
+			<div id="alpha">
+				<div id="alphaRow1">
+					<img src="img/q.png" width="65" height="65" alt="Q" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/w.png" width="65" height="65" alt="W" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/e.png" width="65" height="65" alt="E" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/r.png" width="65" height="65" alt="R" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/t.png" width="65" height="65" alt="T" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/y.png" width="65" height="65" alt="Y" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/u.png" width="65" height="65" alt="U" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/i.png" width="65" height="65" alt="I" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/o.png" width="65" height="65" alt="O" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/p.png" width="65" height="65" alt="P" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+				</div><!--#alphaRow1-->                                 
+				<div id="alphaRow2">                                    
+					<img src="img/a.png" width="65" height="65" alt="A" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/s.png" width="65" height="65" alt="S" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/d.png" width="65" height="65" alt="D" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/f.png" width="65" height="65" alt="F" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/g.png" width="65" height="65" alt="G" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/h.png" width="65" height="65" alt="H" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/j.png" width="65" height="65" alt="J" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/k.png" width="65" height="65" alt="K" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/l.png" width="65" height="65" alt="L" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/dot.png" width="65" height="65" alt="." onmousedown="keyDown(this,'dot');" onmouseup="keyUp(this,'dot');">
+				</div><!--#alphaRow2-->                                 
+				<div id="alphaRow3">                                    
+					<img src="img/z.png" width="65" height="65" alt="Z" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/x.png" width="65" height="65" alt="X" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/c.png" width="65" height="65" alt="C" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/v.png" width="65" height="65" alt="V" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/b.png" width="65" height="65" alt="B" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/n.png" width="65" height="65" alt="N" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/m.png" width="65" height="65" alt="M" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/hyphen.png" width="65" height="65" alt="-" onmousedown="keyDown(this,'hyphen');" onmouseup="keyUp(this,'hyphen');">
+					<img src="img/underscore.png" width="65" height="65" alt="_" onmousedown="keyDown(this,'underscore');" onmouseup="keyUp(this,'underscore');">
+					<img src="img/at.png" width="65" height="65" alt="@" onmousedown="keyDown(this,'at');" onmouseup="keyUp(this,'at');">
+				</div><!--#alphaRow3-->
+				<div id="alphaRow4">
+					<img src="img/space.png" width="541" height="65" alt=" " onmousedown="keyDown(this,'space');" onmouseup="keyUp(this,'space');">
+					<img src="img/delete.png" width="132" height="65" alt="Delete" onmousedown="keyDown(this,'delete');" onmouseup="keyUp(this,'delete');">
+				</div><!--#alphaRow4-->
+			</div><!--#alpha-->
+			<div id="numeric">
+				<div id="numericRow1">
+					<img src="img/7.png" width="65" height="65" alt="7" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/8.png" width="65" height="65" alt="8" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/9.png" width="65" height="65" alt="9" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+				</div>
+				<div id="numericRow2">
+					<img src="img/4.png" width="65" height="65" alt="4" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/5.png" width="65" height="65" alt="5" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/6.png" width="65" height="65" alt="6" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+				</div>
+				<div id="numericRow3">
+					<img src="img/1.png" width="65" height="65" alt="1" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/2.png" width="65" height="65" alt="2" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+					<img src="img/3.png" width="65" height="65" alt="3" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+				</div>
+				<div id="numericRow4">
+					<img src="img/0.png" width="65" height="65" alt="0" onmousedown="keyDown(this);" onmouseup="keyUp(this);">
+				</div>
+			</div><!--#numeric-->	
+		</div><!--#keyboard-->
+	</div><!--#main-->
+</body>
+</html>
