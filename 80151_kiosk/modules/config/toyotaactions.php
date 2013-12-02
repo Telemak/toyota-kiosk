@@ -118,7 +118,7 @@ function im_sendEmailToClient($gender, $lastname, $firstname, $email)
 	ini_set ( 'sendmail_from' , 'Toyota.Datenschutz@toyota.de' );
 	$eol="\r\n";
 
-	$subject='';
+	$subject='Toyota information – Ihre Anfrage';
 
 	$destination = $email;
 
