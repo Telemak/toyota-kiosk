@@ -251,7 +251,7 @@
 	</style>
 </head>
 
-<body onload="preloader();giveFieldFocus($('lastname'),false);resetTimer();">
+<body onload="preloader();resetTimer();$('keyboard').hide();">
 	<div id="countries">
 		<ul>
 			<li><a href="#" onclick="setCountry(this.id);" id="Austria">Austria</a></li>
@@ -302,6 +302,61 @@
 		<div id="window">
 			<div id="view">
 				<div id="scene1" class="scene">
+				<script type="text/javascript">
+					$('scene8').show(function() { 
+						alert('ok');
+					    $('keyboard').hide();
+					});
+				</script>
+					<div style="font-size: 52px;">
+					  <p>I want to receive information about following model (please tick box) :</p>
+					</div>
+					<div  style="font-size: 42px;font-weight: bold;">
+						<table border="0" width="1200px" cellspacing="10">
+							<tr>
+								<td><input type="checkbox" id="Aygo" /><label for="Aygo" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Aygo</label></td><td>
+								<input type="checkbox" id="Corolla" /><label for="Corolla" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);"><span></span>Corolla</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="Yaris" /><label for="Yaris"><span></span>Yaris</label></td>
+								<td><input type="checkbox" id="Avensis" /><label for="Avensis"><span></span>Avensis</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="Yaris Hybrid" /><label for="Yaris Hybrid"><span></span>Yaris Hybrid</label></td>
+								<td><input type="checkbox" id="RAV4" /><label for="RAV4"><span></span>RAV4</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="Auris" /><label for="Auris"><span></span>Auris</label></td>
+								<td><input type="checkbox" id="GT86" /><label for="GT86"><span></span>GT86</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="Auris Hybrid" /><label for="Auris Hybrid"><span></span>Auris Hybrid</label></td>
+								<td><input type="checkbox" id="Prius" /><label for="Prius"><span></span>Prius</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="Auris Touring Sports" /><label for="Auris Touring Sports"><span></span>Auris Touring Sports</label></td>
+								<td><input type="checkbox" id="Prius Plug-In" /><label for="Prius Plug-In"><span></span>Prius Plug-In</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="Auris Hybrid Touring Sports" /><label for="Auris Hybrid Touring Sports"><span></span>Auris Hybrid Touring Sports</label></td>
+								<td><input type="checkbox" id="Prius+" /><label for="Prius+"><span></span>Prius+</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="Verso" /><label for="Verso"><span></span>Verso</label></td>
+								<td><input type="checkbox" id="Land Cruiser" /><label for="Land Cruiser"><span></span>Land Cruiser</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="Verso-S" /><label for="Verso-S"><span></span>Verso-S</label></td>
+								<td><input type="checkbox" id="Land Cruiser V8" /><label for="Land Cruiser V8"><span></span>Land Cruiser V8</label></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><input type="checkbox" id="Hilux" /><label for="Hilux"><span></span>Hilux</label></td>
+							</tr>
+						</table>
+					</div>		
+				</div>
+				<div id="scene2" class="scene">
 					<div class="pageTitle">
 						Please fill in this form <span class="small">(4 steps)</span>
 					</div><!--#pageTitle-->
@@ -312,7 +367,7 @@
 					<div class="row"><div class="caption">Name*</div><div id="lastname" class="data" onclick="giveFieldFocus(this,true);"></div></div>
 					<div class="row"><div class="caption">First Name*</div><div id="firstname" class="data" onclick="giveFieldFocus(this,true);"></div></div>
 				</div>
-				<div id="scene2" class="scene">
+				<div id="scene3" class="scene">
 					<div class="pageTitle">
 						&nbsp;
 					</div><!--#pageTitle-->
@@ -325,7 +380,7 @@
 					<div class="row"><div class="caption">City*</div><div id="city" class="data" onclick="giveFieldFocus(this,true);"></div></div>
 					<div class="row"><div class="caption">Country*</div><div id="country" class="data" onclick="giveFieldFocus(this,true);hideKeyboard();"></div></div>
 				</div>
-				<div id="scene3" class="scene">
+				<div id="scene4" class="scene">
 					<div class="pageTitle">
 						&nbsp;
 					</div><!--#pageTitle-->
@@ -335,7 +390,7 @@
 					<div class="row"><div class="caption">Telephone*</div><div id="telephone" class="data" onclick="giveFieldFocus(this,true);">+</div></div>
 					<div class="row"><div class="caption">Email</div><div id="email" class="data" onclick="giveFieldFocus(this,true);"></div></div>
 				</div>
-				<div id="scene4" class="scene">
+				<div id="scene5" class="scene">
 					<div class="pageTitle">
 						Please confirm your data
 					</div><!--#pageTitle-->
@@ -343,6 +398,7 @@
 						<div class="left">Step 4 of 4</div>
 					</div><!--#stepInfo-->
 					<div id="confirm">
+						<div class="row"><div class="caption">Model</div><div id="confirm_model" alt="model" class="data"></div></div>
 						<div class="row"><div class="caption">Gender</div><div id="confirm_gender" alt="gender" class="data" onmouseup="gotoSceneWithFocusOn(0,this);"></div></div>
 						<div class="row"><div class="caption">First Name</div><div id="confirm_firstname" alt="firstname" class="data" onmouseup="gotoSceneWithFocusOn(0,this);"></div></div>
 						<div class="row"><div class="caption">Name</div><div id="confirm_lastname" alt="lastname" class="data" onmouseup="gotoSceneWithFocusOn(0,this);"></div></div>

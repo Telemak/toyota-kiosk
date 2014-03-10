@@ -271,3 +271,21 @@ p {
 .smallText {
 	font-size: 80%;
 }
+
+input[type="checkbox"] {
+	display: none;
+	/*	visibility: hidden; */
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+	cursor:pointer;
+    height:27px;
+	width:27px;
+	background:url('../img/check_sheet.png') left top no-repeat;
+	vertical-align:middle;
+	margin: -8px 10px 0 0;
+}
+input[type="checkbox"]:checked + label span  {
+    background:url('../img/check_sheet.png') -29px top no-repeat;
+}

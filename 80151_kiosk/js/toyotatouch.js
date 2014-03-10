@@ -2,6 +2,7 @@ document.observe('dom:loaded', function(){
 	if ($('countries')) {
 		$('countries').hide();
 	}
+	/*$('keyboard').hide();*/
 	});
 
 
@@ -79,6 +80,10 @@ function buttonUp(button, action) {
 	case 'start_enter':
 		location.href = "data.html";
 		break;
+		
+	case 'select_cars':
+		location.href = "select_cars.html";
+		break;	
 		
 	default:
 	}
@@ -298,11 +303,18 @@ function setCountry(theCountry) {
 	showKeyboard();
 }
 
+function setModel(theModel) {
+	resetTimer();
+	/*$('model').innerHTML = theModel;*/
+	data['theModel'] = theModel;
+	showKeyboard();
+}
+
 var countriesAreShown = false;
 var currentStep = 0;
-var lastStep = 3;
+var lastStep = 4;
 
-var data = {'gender':'', 'lastname':'', 'firstname':'', 'street':'', 'number':'', 'box':'', 'zip':'', 'city':'', 'country':'', 'telephone':'', 'email':'', 'action':'insert'};
+var data = {'gender':'', 'lastname':'', 'firstname':'', 'street':'', 'number':'', 'box':'', 'zip':'', 'city':'', 'country':'', 'telephone':'', 'email':'', 'action':'insert', 'model':''};
 
 var validation0 = {'gender':'text', 'lastname':'text', 'firstname': 'text'};
 var validation1 = {'street':'text', 'number':'text', 'box': 'none', 'zip': 'text', 'city': 'text', 'country': 'text'};

@@ -17,6 +17,7 @@ $city		= isset($_GET['city']) ? filter_input(INPUT_GET, 'city', FILTER_SANITIZE_
 $country	= isset($_GET['country']) ? filter_input(INPUT_GET, 'country', FILTER_SANITIZE_STRING) : '';
 $telephone	= isset($_GET['telephone']) ? filter_input(INPUT_GET, 'telephone', FILTER_SANITIZE_STRING) : '';
 $email		= isset($_GET['email']) ? filter_input(INPUT_GET, 'email', FILTER_SANITIZE_STRING) : '';
+$model		= isset($_GET['model']) ? filter_input(INPUT_GET, 'model', FILTER_SANITIZE_STRING) : '';
 /**
  * end Adding Sanitisation
  **/
@@ -28,7 +29,7 @@ if (isset($_GET['action'])) {
 				echo 'action is insert...<br />';
 			}
 			global $pconnect;
-			$query = sprintf('INSERT INTO entries ( gender, lastname, firstname, street, number, box, zip, city, country, telephone, email) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
+			$query = sprintf('INSERT INTO entries ( gender, lastname, firstname, street, number, box, zip, city, country, telephone, email, model) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
 			GetSQLValueString($gender,'text'),
 			GetSQLValueString($lastname,'text'),
 			GetSQLValueString($firstname,'text'),
@@ -40,6 +41,7 @@ if (isset($_GET['action'])) {
 			GetSQLValueString($country,'text'),
 			GetSQLValueString($telephone,'text'),
 			GetSQLValueString($email,'text'));
+			GetSQLValueString($model,'model'));
 				//echo $query;
 		$rs = mysql_query($query, $pconnect) or die(mysql_error());
 		
