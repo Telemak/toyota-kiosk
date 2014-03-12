@@ -302,56 +302,50 @@
 		<div id="window">
 			<div id="view">
 				<div id="scene1" class="scene">
-				<script type="text/javascript">
-					$('scene8').show(function() { 
-						alert('ok');
-					    $('keyboard').hide();
-					});
-				</script>
 					<div style="font-size: 52px;">
 					  <p>I want to receive information about following model (please tick box) :</p>
 					</div>
 					<div  style="font-size: 42px;font-weight: bold;">
-						<table border="0" width="1200px" cellspacing="10">
+						<table border="0" width="1000px" cellspacing="10">
 							<tr>
-								<td><input type="checkbox" id="Aygo" /><label for="Aygo" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Aygo</label></td><td>
-								<input type="checkbox" id="Corolla" /><label for="Corolla" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);"><span></span>Corolla</label></td>
+								<td><input type="radio" id="Aygo" value="Ayo" name="model" /><label for="Aygo" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Aygo</label></td><td>
+								<input type="radio" id="Corolla" value="Corolla	" name="model"/><label for="Corolla" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);"><span></span>Corolla</label></td>
 							</tr>
 							<tr>
-								<td><input type="checkbox" id="Yaris" /><label for="Yaris"><span></span>Yaris</label></td>
-								<td><input type="checkbox" id="Avensis" /><label for="Avensis"><span></span>Avensis</label></td>
+								<td><input type="radio" id="Yaris"  value="Yaris" name="model" /><label for="Yaris" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Yaris</label></td>
+								<td><input type="radio" id="Avensis"  value="Avensis" name="model" /><label for="Avensis" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Avensis</label></td>
 							</tr>
 							<tr>
-								<td><input type="checkbox" id="Yaris Hybrid" /><label for="Yaris Hybrid"><span></span>Yaris Hybrid</label></td>
-								<td><input type="checkbox" id="RAV4" /><label for="RAV4"><span></span>RAV4</label></td>
+								<td><input type="radio" id="Yaris Hybrid"  value="Yaris Hybrid" name="model" /><label for="Yaris Hybrid" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Yaris Hybrid</label></td>
+								<td><input type="radio" id="RAV4"  value="RAV4" name="model" /><label for="RAV4" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>RAV4</label></td>
 							</tr>
 							<tr>
-								<td><input type="checkbox" id="Auris" /><label for="Auris"><span></span>Auris</label></td>
-								<td><input type="checkbox" id="GT86" /><label for="GT86"><span></span>GT86</label></td>
+								<td><input type="radio" id="Auris"  value="Auris" name="model" /><label for="Auris" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Auris</label></td>
+								<td><input type="radio" id="GT86"  value="GT86" name="model" /><label for="GT86" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>GT86</label></td>
 							</tr>
 							<tr>
-								<td><input type="checkbox" id="Auris Hybrid" /><label for="Auris Hybrid"><span></span>Auris Hybrid</label></td>
-								<td><input type="checkbox" id="Prius" /><label for="Prius"><span></span>Prius</label></td>
+								<td><input type="radio" id="Auris Hybrid"  value="Auris Hybrid" name="model" /><label for="Auris Hybrid" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Auris Hybrid</label></td>
+								<td><input type="radio" id="Prius"  value="Prius" name="model" /><label for="Prius" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Prius</label></td>
 							</tr>
 							<tr>
-								<td><input type="checkbox" id="Auris Touring Sports" /><label for="Auris Touring Sports"><span></span>Auris Touring Sports</label></td>
-								<td><input type="checkbox" id="Prius Plug-In" /><label for="Prius Plug-In"><span></span>Prius Plug-In</label></td>
+								<td><input type="radio" id="Auris Touring Sports"  value="Auris Touring Sports" name="model" /><label for="Auris Touring Sports" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Auris Touring Sports</label></td>
+								<td><input type="radio" id="Prius Plug-In"  value="Prius Plug-In" name="model" /><label for="Prius Plug-In" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Prius Plug-In</label></td>
 							</tr>
 							<tr>
-								<td><input type="checkbox" id="Auris Hybrid Touring Sports" /><label for="Auris Hybrid Touring Sports"><span></span>Auris Hybrid Touring Sports</label></td>
-								<td><input type="checkbox" id="Prius+" /><label for="Prius+"><span></span>Prius+</label></td>
+								<td><input type="radio" id="Auris Hybrid Touring Sports"  value="Auris Hybrid Touring Sports" name="model" /><label for="Auris Hybrid Touring Sports" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Auris Hybrid Touring Sports</label></td>
+								<td><input type="radio" id="Prius+"  value="Prius+" name="model" /><label for="Prius+" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Prius+</label></td>
 							</tr>
 							<tr>
-								<td><input type="checkbox" id="Verso" /><label for="Verso"><span></span>Verso</label></td>
-								<td><input type="checkbox" id="Land Cruiser" /><label for="Land Cruiser"><span></span>Land Cruiser</label></td>
+								<td><input type="radio" id="Land Cruiser"  value="Land Cruiser" name="model" /><label for="Land Cruiser" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Land Cruiser</label></td>
+								<td><input type="radio" id="Verso"  value="Verso" name="model" /><label for="Verso" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Verso</label></td>
 							</tr>
 							<tr>
-								<td><input type="checkbox" id="Verso-S" /><label for="Verso-S"><span></span>Verso-S</label></td>
-								<td><input type="checkbox" id="Land Cruiser V8" /><label for="Land Cruiser V8"><span></span>Land Cruiser V8</label></td>
+								<td><input type="radio" id="Land Cruiser V8"  value="Land Cruiser V8" name="model" /><label for="Land Cruiser V8" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Land Cruiser V8</label></td>
+								<td><input type="radio" id="Verso-S"  value="Verso-S" name="model" /><label for="Verso-S" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Verso-S</label></td>
 							</tr>
 							<tr>
+								<td><input type="radio" id="Hilux"  value="Hilux" name="model" /><label for="Hilux" onclick="setModel(this.htmlFor);gotoSceneWithFocusOn(1,this);" ><span></span>Hilux</label></td>
 								<td></td>
-								<td><input type="checkbox" id="Hilux" /><label for="Hilux"><span></span>Hilux</label></td>
 							</tr>
 						</table>
 					</div>		
@@ -398,17 +392,17 @@
 						<div class="left">Step 4 of 4</div>
 					</div><!--#stepInfo-->
 					<div id="confirm">
-						<div class="row"><div class="caption">Model</div><div id="confirm_model" alt="model" class="data"></div></div>
-						<div class="row"><div class="caption">Gender</div><div id="confirm_gender" alt="gender" class="data" onmouseup="gotoSceneWithFocusOn(0,this);"></div></div>
-						<div class="row"><div class="caption">First Name</div><div id="confirm_firstname" alt="firstname" class="data" onmouseup="gotoSceneWithFocusOn(0,this);"></div></div>
-						<div class="row"><div class="caption">Name</div><div id="confirm_lastname" alt="lastname" class="data" onmouseup="gotoSceneWithFocusOn(0,this);"></div></div>
-						<div class="row"><div class="caption">Street</div><div id="confirm_street" alt="street" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
-						<div class="row"><div class="caption">Number</div><div id="confirm_number" alt="number" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div><div class="caption" id="boxCaption">Box</div><div id="confirm_box" alt="box" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
-						<div class="row"><div class="caption">Zip Code</div><div id="confirm_zip" alt="zip" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
-						<div class="row"><div class="caption">City</div><div id="confirm_city" alt="city" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
-						<div class="row"><div class="caption">Country</div><div id="confirm_country" alt="country" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
-						<div class="row"><div class="caption">Telephone</div><div id="confirm_telephone" alt="telephone" class="data" onmouseup="gotoSceneWithFocusOn(2,this);"></div></div>
-						<div class="row"><div class="caption">Email</div><div id="confirm_email" alt="email" class="data" onmouseup="gotoSceneWithFocusOn(2,this);"></div></div>
+						<div class="row"><div class="caption">Model</div><div id="confirm_model" alt="model" class="data" onmouseup="gotoSceneWithFocusOn(0,this);"></div></div>
+						<div class="row"><div class="caption">Gender</div><div id="confirm_gender" alt="gender" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
+						<div class="row"><div class="caption">First Name</div><div id="confirm_firstname" alt="firstname" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
+						<div class="row"><div class="caption">Name</div><div id="confirm_lastname" alt="lastname" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
+						<div class="row"><div class="caption">Street</div><div id="confirm_street" alt="street" class="data" onmouseup="gotoSceneWithFocusOn(2,this);"></div></div>
+						<div class="row"><div class="caption">Number</div><div id="confirm_number" alt="number" class="data" onmouseup="gotoSceneWithFocusOn(2,this);"></div><div class="caption" id="boxCaption">Box</div><div id="confirm_box" alt="box" class="data" onmouseup="gotoSceneWithFocusOn(1,this);"></div></div>
+						<div class="row"><div class="caption">Zip Code</div><div id="confirm_zip" alt="zip" class="data" onmouseup="gotoSceneWithFocusOn(2,this);"></div></div>
+						<div class="row"><div class="caption">City</div><div id="confirm_city" alt="city" class="data" onmouseup="gotoSceneWithFocusOn(2,this);"></div></div>
+						<div class="row"><div class="caption">Country</div><div id="confirm_country" alt="country" class="data" onmouseup="gotoSceneWithFocusOn(2,this);"></div></div>
+						<div class="row"><div class="caption">Telephone</div><div id="confirm_telephone" alt="telephone" class="data" onmouseup="gotoSceneWithFocusOn(3,this);"></div></div>
+						<div class="row"><div class="caption">Email</div><div id="confirm_email" alt="email" class="data" onmouseup="gotoSceneWithFocusOn(3,this);"></div></div>
 					</div>
 					<div id="confirmButton">
 						<img src="img/confirm.png" width="206" height="65" alt="confirm" border="0" onmousedown="buttonDown(this,'confirm');" onmouseup="buttonUp(this,'confirm');"><div class="correct">or tap a field to correct</div>

@@ -81,10 +81,6 @@ function buttonUp(button, action) {
 		location.href = "data.html";
 		break;
 		
-	case 'select_cars':
-		location.href = "select_cars.html";
-		break;	
-		
 	default:
 	}
 }
@@ -230,7 +226,8 @@ function moveDivBy(index, focusField) {
 						new Effect.Appear('keyboard', {duration: 0.5});
 					}
 				} else { // if the focusField is 'gender' --> there is no div with that id !!!
-					new Effect.Appear('keyboard', {duration: 0.5});
+					if( index == 0 ) $('keyboard').hide();
+					else new Effect.Appear('keyboard', {duration: 0.5});
 				}
 			}
 		}
@@ -243,7 +240,7 @@ function moveDivBy(index, focusField) {
 		} else {
 			// if a field is not defined, give focus to the first field in the scene
 			var field = 'div#scene'+(index+1)+' div.data'
-			giveFieldFocus($$(field)[0],true);
+			giveFieldFocus($$(field)[0],true);			
 		}
 	} else {
 		// we are moving into the confirmation scene, just update the data array
@@ -306,7 +303,8 @@ function setCountry(theCountry) {
 function setModel(theModel) {
 	resetTimer();
 	/*$('model').innerHTML = theModel;*/
-	data['theModel'] = theModel;
+	data['model'] = theModel;
+	$('confirm_model').innerHTML=theModel;
 	showKeyboard();
 }
 
@@ -316,21 +314,22 @@ var lastStep = 4;
 
 var data = {'gender':'', 'lastname':'', 'firstname':'', 'street':'', 'number':'', 'box':'', 'zip':'', 'city':'', 'country':'', 'telephone':'', 'email':'', 'action':'insert', 'model':''};
 
-var validation0 = {'gender':'text', 'lastname':'text', 'firstname': 'text'};
-var validation1 = {'street':'text', 'number':'text', 'box': 'none', 'zip': 'text', 'city': 'text', 'country': 'text'};
-var validation2 = {'telephone':'text', 'email':'email'};
+var validation0 = {'model':'text'};
+var validation1 = {'gender':'text', 'lastname':'text', 'firstname': 'text'};
+var validation2 = {'street':'text', 'number':'text', 'box': 'none', 'zip': 'text', 'city': 'text', 'country': 'text'};
+var validation3 = {'telephone':'text', 'email':'email'};
 
-var validation0 = $A(['text', 'text', 'text']);
-var validation0 = $H({'gender':'text', 'lastname':'text', 'firstname': 'text'});
+var validation1 = $A(['text', 'text', 'text']);
+var validation1 = $H({'gender':'text', 'lastname':'text', 'firstname': 'text'});
 
 
-var validation1 = $H({'street':'text', 'number':'text', 'box': 'none', 'zip': 'text', 'city': 'text', 'country': 'text'});
-var validation2 = $H({'telephone':'text', 'email':'email'});
+var validation2 = $H({'street':'text', 'number':'text', 'box': 'none', 'zip': 'text', 'city': 'text', 'country': 'text'});
+var validation3 = $H({'telephone':'text', 'email':'email'});
 
 
 //var validation = {'validation0':validation0, 'validation1':validation1, 'validation2':validation2};
 //var validation = $H({validation0:validation0, validation1:validation1, validation2:validation2});
-var validation = $A([validation0, validation1, validation2]);
+var validation = $A([validation0, validation1, validation2, validation3]);
 
 
 

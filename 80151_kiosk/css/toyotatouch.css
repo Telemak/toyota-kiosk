@@ -9,7 +9,8 @@ body {
 }
 
 #main {
-	width: 972px;
+	/*width: 972px;*/
+	width: 1280px;
 	padding-left: 75px;
 	position: absolute;
 	top: 0;
@@ -272,12 +273,12 @@ p {
 	font-size: 80%;
 }
 
-input[type="checkbox"] {
+input[type="radio"] {
 	display: none;
 	/*	visibility: hidden; */
 }
 
-input[type="checkbox"] + label span {
+input[type="radio"] + label span {
     display:inline-block;
 	cursor:pointer;
     height:27px;
@@ -286,6 +287,6 @@ input[type="checkbox"] + label span {
 	vertical-align:middle;
 	margin: -8px 10px 0 0;
 }
-input[type="checkbox"]:checked + label span  {
+input[type="radio"]:checked + label span  {
     background:url('../img/check_sheet.png') -29px top no-repeat;
 }
