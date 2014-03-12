@@ -40,8 +40,8 @@ if (isset($_GET['action'])) {
 			GetSQLValueString($city,'text'),
 			GetSQLValueString($country,'text'),
 			GetSQLValueString($telephone,'text'),
-			GetSQLValueString($email,'text'));
-			GetSQLValueString($model,'model'));
+			GetSQLValueString($email,'text'),
+			GetSQLValueString($model,'text'));
 				//echo $query;
 		$rs = mysql_query($query, $pconnect) or die(mysql_error());
 		

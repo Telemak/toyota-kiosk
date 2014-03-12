@@ -429,9 +429,10 @@ function preloader() {
 	images[70]="img/x_over.png";
 	images[71]="img/y_over.png";
 	images[72]="img/z_over.png";
+	images[72]="img/check_sheet.png";
 
 	// start preloading
-	for(i=0; i<=72; i++) {
+	for(i=0; i<=73; i++) {
 		imageObj.src=images[i];
 	}
 }

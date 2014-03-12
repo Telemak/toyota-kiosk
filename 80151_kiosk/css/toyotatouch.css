@@ -9,8 +9,8 @@ body {
 }
 
 #main {
-	/*width: 972px;*/
-	width: 1280px;
+	width: 972px;
+	/*width: 1280px;*/
 	padding-left: 75px;
 	position: absolute;
 	top: 0;
